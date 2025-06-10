@@ -60,12 +60,6 @@ class CountryController extends Controller
 
         return redirect()->route('countries.index')->with('success', 'Valsts veiksmīgi dzēsta.');
     }
-        
-    // public function apiIndex(): JsonResponse
-    // {
-    //     $countries = Country::all(); // Iegūst visas valstis no datubāzes
-    //     return response()->json($countries); // Atgriež valstis JSON formātā
-    // }
     public function apiIndex() {
         return Country::all();
     }
